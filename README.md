@@ -21,3 +21,30 @@ następnie usuń element maksymalny.
 Rozpatrz oba warianty operacji sprawdzającej. Która z nich daje mniejszą średnią liczbę
 porównań.
 Licznik porównań można zrealizować jako zmienną globalną.
+
+## Lista 2
+### Zadanie 1
+Celem zadania jest zaimplementowanie i przetestowanie następującychalgorytmów sortowania:
+* SelectSort
+* InsertionSort
+* HeapSort
+* QuickSort
+
+Program przyjmuje dwa parametry wejściowe --type select|insert|heap|quick –
+określający wykorzystywany algorytm sortowania oraz --asc|--desc – określający porządek sortowania. Wejściem dla programu są kolejno:
+* liczba n – liczba elementów do posortowania
+* ciąg elementów do posortowania (niech elementy tej listy zostaną nazwane kluczami)
+
+### Zadanie 2
+ Uzupełnij program z Zadania 1 o możliwość wywołania go z parametrem uruchomienia --stat nazwa_pliku k, wtedy pomija on wczytywanie danych i dla
+każdego n ∈ {100, 200, 300, . . . , 10000} wykonuje po k niezależnych powtórzeń:
+* generowania losowego ciągu n elementowego (zadbaj o dobry generator pseudolosowy)
+* sortowania kopii wygenerowanego ciągu każdym algorytmem
+* dla każdego z sortowań, zapisania do pliku nazwa_pliku statystyk odnośnie rozmiaru danych n, liczby wykonanych porównań między kluczami, liczby przestawień kluczy oraz czasu działania algorytmu sortującego
+
+Po zakończeniu programu, korzystając z zebranych danych przedstaw na wykresach.
+
+### Zadanie 3
+Dodaj do poprzednich zadań modyfikację algorytmu QuickSort (ModyfiedQuickSort, opcja --type mquick), która wykonuje następujące czynności:
+* jeśli zostało co najwyżej 16 elementów to QuickSort zastąp przez InsertionSort
+* wybiera element dzielący jako medianę pierwszego, środkowego i ostatniego elementu (pamiętaj o porównaniach między tymi elementami)
